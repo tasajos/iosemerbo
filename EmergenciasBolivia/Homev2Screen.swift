@@ -47,6 +47,23 @@ struct Homev2Screen: View {
             }
             .padding(.top, 20)
 
+            // Sección de INFORMACIÓN ÚTIL
+            VStack(alignment: .leading) {
+                Text("INFORMACIÓN ÚTIL")
+                    .font(.headline)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        InfoCard(imageName: "Eventos", title: "Eventos")
+                        InfoCard(imageName: "Voluntarios", title: "Conviértete en Voluntario")
+                        InfoCard(imageName: "Kits", title: "Kits")
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top, 20)
+
             Spacer()
         }
         .padding()
@@ -62,6 +79,30 @@ struct ImageButton: View {
             .frame(width: 60, height: 60)
             .scaledToFit()
             .cornerRadius(10)
+    }
+}
+
+struct InfoCard: View {
+    let imageName: String
+    let title: String
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Image(imageName)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .scaledToFit()
+                .cornerRadius(10)
+
+            Text(title)
+                .font(.caption)
+                .foregroundColor(.black)
+                .padding(.top, 5)
+        }
+        .frame(width: 150, height: 120)
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
     }
 }
 
