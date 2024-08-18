@@ -20,7 +20,7 @@ struct Homev2Screen: View {
                 HStack(spacing: 20) {
                     Image("logoins")
                         .resizable()
-                        .frame(width: 200, height: 80)
+                        .frame(width: 180, height: 60)
                         .scaledToFit()
                 }
             }

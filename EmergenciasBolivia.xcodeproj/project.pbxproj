@@ -10,6 +10,7 @@
 		0711B61A2C7188DF0039D825 /* voluntario.png in Resources */ = {isa = PBXBuildFile; fileRef = 0711B6192C7188DE0039D825 /* voluntario.png */; };
 		0711B6522C7221930039D825 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B6512C7221930039D825 /* HomeScreen.swift */; };
 		0711B6542C7248410039D825 /* Homev2Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B6532C7248400039D825 /* Homev2Screen.swift */; };
+		0711B6562C72807D0039D825 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0711B6552C72807C0039D825 /* GoogleService-Info.plist */; };
 		07C96CA42C7183D800CA3A07 /* EmergenciasBoliviaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */; };
 		07C96CA62C7183D800CA3A07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CA52C7183D800CA3A07 /* ContentView.swift */; };
 		07C96CA82C7183E500CA3A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C96CA72C7183E500CA3A07 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 		07C96CB52C7183E700CA3A07 /* EmergenciasBoliviaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CB42C7183E700CA3A07 /* EmergenciasBoliviaTests.swift */; };
 		07C96CBF2C7183E700CA3A07 /* EmergenciasBoliviaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CBE2C7183E700CA3A07 /* EmergenciasBoliviaUITests.swift */; };
 		07C96CC12C7183E700CA3A07 /* EmergenciasBoliviaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CC02C7183E700CA3A07 /* EmergenciasBoliviaUITestsLaunchTests.swift */; };
+		378E0ECE7928E1343BF491B6 /* Pods_EmergenciasBolivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5933FF5FF3BC26B6F2FE41FC /* Pods_EmergenciasBolivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 		0711B6192C7188DE0039D825 /* voluntario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voluntario.png; sourceTree = "<group>"; };
 		0711B6512C7221930039D825 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		0711B6532C7248400039D825 /* Homev2Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homev2Screen.swift; sourceTree = "<group>"; };
+		0711B6552C72807C0039D825 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07C96CA02C7183D800CA3A07 /* EmergenciasBolivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergenciasBolivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergenciasBoliviaApp.swift; sourceTree = "<group>"; };
 		07C96CA52C7183D800CA3A07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		07C96CBA2C7183E700CA3A07 /* EmergenciasBoliviaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmergenciasBoliviaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C96CBE2C7183E700CA3A07 /* EmergenciasBoliviaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergenciasBoliviaUITests.swift; sourceTree = "<group>"; };
 		07C96CC02C7183E700CA3A07 /* EmergenciasBoliviaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergenciasBoliviaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2E0F6821E246301D384C7705 /* Pods-EmergenciasBolivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergenciasBolivia.debug.xcconfig"; path = "Target Support Files/Pods-EmergenciasBolivia/Pods-EmergenciasBolivia.debug.xcconfig"; sourceTree = "<group>"; };
+		5933FF5FF3BC26B6F2FE41FC /* Pods_EmergenciasBolivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmergenciasBolivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F5D89FA94664EFB935BD09 /* Pods-EmergenciasBolivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmergenciasBolivia.release.xcconfig"; path = "Target Support Files/Pods-EmergenciasBolivia/Pods-EmergenciasBolivia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378E0ECE7928E1343BF491B6 /* Pods_EmergenciasBolivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,8 @@
 				07C96CB32C7183E700CA3A07 /* EmergenciasBoliviaTests */,
 				07C96CBD2C7183E700CA3A07 /* EmergenciasBoliviaUITests */,
 				07C96CA12C7183D800CA3A07 /* Products */,
+				284AB8911289FB82ABB083C5 /* Pods */,
+				E19B6AC14F2C88ED5B4E4F11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +109,7 @@
 		07C96CA22C7183D800CA3A07 /* EmergenciasBolivia */ = {
 			isa = PBXGroup;
 			children = (
+				0711B6552C72807C0039D825 /* GoogleService-Info.plist */,
 				07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */,
 				07C96CA52C7183D800CA3A07 /* ContentView.swift */,
 				07C96CA72C7183E500CA3A07 /* Assets.xcassets */,
@@ -136,6 +146,23 @@
 			path = EmergenciasBoliviaUITests;
 			sourceTree = "<group>";
 		};
+		284AB8911289FB82ABB083C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E0F6821E246301D384C7705 /* Pods-EmergenciasBolivia.debug.xcconfig */,
+				B7F5D89FA94664EFB935BD09 /* Pods-EmergenciasBolivia.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E19B6AC14F2C88ED5B4E4F11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5933FF5FF3BC26B6F2FE41FC /* Pods_EmergenciasBolivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07C96CC42C7183E700CA3A07 /* Build configuration list for PBXNativeTarget "EmergenciasBolivia" */;
 			buildPhases = (
+				116395311BCB766A009E9CC2 /* [CP] Check Pods Manifest.lock */,
 				07C96C9C2C7183D800CA3A07 /* Sources */,
 				07C96C9D2C7183D800CA3A07 /* Frameworks */,
 				07C96C9E2C7183D800CA3A07 /* Resources */,
+				8346B498B719D989C7C130D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +272,7 @@
 				07C96CAB2C7183E500CA3A07 /* Preview Assets.xcassets in Resources */,
 				07C96CA82C7183E500CA3A07 /* Assets.xcassets in Resources */,
 				0711B61A2C7188DF0039D825 /* voluntario.png in Resources */,
+				0711B6562C72807D0039D825 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +291,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		116395311BCB766A009E9CC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmergenciasBolivia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8346B498B719D989C7C130D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmergenciasBolivia/Pods-EmergenciasBolivia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmergenciasBolivia/Pods-EmergenciasBolivia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmergenciasBolivia/Pods-EmergenciasBolivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07C96C9C2C7183D800CA3A07 /* Sources */ = {
@@ -343,6 +415,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "Any IOS Simulator SDK";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -403,6 +476,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "Any IOS Simulator SDK";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -423,6 +497,7 @@
 		};
 		07C96CC52C7183E700CA3A07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E0F6821E246301D384C7705 /* Pods-EmergenciasBolivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +528,7 @@
 		};
 		07C96CC62C7183E700CA3A07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7F5D89FA94664EFB935BD09 /* Pods-EmergenciasBolivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +543,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
