@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0711B61A2C7188DF0039D825 /* voluntario.png in Resources */ = {isa = PBXBuildFile; fileRef = 0711B6192C7188DE0039D825 /* voluntario.png */; };
+		0711B6522C7221930039D825 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B6512C7221930039D825 /* HomeScreen.swift */; };
 		07C96CA42C7183D800CA3A07 /* EmergenciasBoliviaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */; };
 		07C96CA62C7183D800CA3A07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CA52C7183D800CA3A07 /* ContentView.swift */; };
 		07C96CA82C7183E500CA3A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C96CA72C7183E500CA3A07 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		0711B6192C7188DE0039D825 /* voluntario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voluntario.png; sourceTree = "<group>"; };
+		0711B6512C7221930039D825 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		07C96CA02C7183D800CA3A07 /* EmergenciasBolivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergenciasBolivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergenciasBoliviaApp.swift; sourceTree = "<group>"; };
 		07C96CA52C7183D800CA3A07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				07C96CA72C7183E500CA3A07 /* Assets.xcassets */,
 				0711B6192C7188DE0039D825 /* voluntario.png */,
 				07C96CA92C7183E500CA3A07 /* Preview Content */,
+				0711B6512C7221930039D825 /* HomeScreen.swift */,
 			);
 			path = EmergenciasBolivia;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				07C96CA62C7183D800CA3A07 /* ContentView.swift in Sources */,
 				07C96CA42C7183D800CA3A07 /* EmergenciasBoliviaApp.swift in Sources */,
+				0711B6522C7221930039D825 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
