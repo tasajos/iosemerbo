@@ -11,40 +11,57 @@ import SwiftUI
 struct Homev2Screen: View {
     var body: some View {
         VStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("VOLUNTARIOS")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ImageButton(imageName: "voluntario", action: { print("Voluntario presionado") })
-                        }
-                        .padding(.horizontal)
-                    }
-
-                    Text("INFORMACIÓN ÚTIL")
-                        .font(.headline)
-                        .padding(.horizontal)
+            // Sección de "Con el Apoyo de"
+            VStack(spacing: 10) {
+                Text("Con el Apoyo de")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+                HStack(spacing: 20) {
+                    Image("logoins")
+                        .resizable()
+                        .frame(width: 200, height: 80)
+                        .scaledToFit()
                 }
             }
+            .padding()
+
+            // Sección de VOLUNTARIOS
+            VStack(alignment: .leading) {
+                Text("VOLUNTARIOS")
+                    .font(.headline)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ImageButton(imageName: "canalw")
+                        ImageButton(imageName: "bomberos")
+                        ImageButton(imageName: "ambulancias")
+                        ImageButton(imageName: "hospitales")
+                        ImageButton(imageName: "educacion")
+                        ImageButton(imageName: "ambientalistas")
+                        ImageButton(imageName: "animalistas")
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top, 20)
+
+            Spacer()
         }
+        .padding()
     }
 }
 
 struct ImageButton: View {
     let imageName: String
-    let action: () -> Void
-    
+
     var body: some View {
-        Button(action: action) {
-            Image(systemName: imageName) // Cambié a systemName para asegurarme de que hay una imagen
-                .resizable()
-                .frame(width: 80, height: 80)
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(40)
-        }
+        Image(imageName)
+            .resizable()
+            .frame(width: 60, height: 60)
+            .scaledToFit()
+            .cornerRadius(10)
     }
 }
 
