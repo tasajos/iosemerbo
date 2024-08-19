@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct Homev2Screen: View {
-    @StateObject private var viewModel = InfoUtilViewModel()
+    @StateObject private var infoUtilViewModel = InfoUtilViewModel()
+    @StateObject private var volunteerOpportunitiesViewModel = VolunteerOpportunitiesViewModel()
+    @StateObject private var prepareEventsViewModel = PrepareEventsViewModel()
     
     var body: some View {
         VStack {
@@ -57,8 +59,42 @@ struct Homev2Screen: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(viewModel.infoUtilList) { info in
+                        ForEach(infoUtilViewModel.infoUtilList) { info in
                             InfoCard(imageName: info.imagen, title: info.nombre)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top, 20)
+            
+            // Sección de OPORTUNIDADES DE VOLUNTARIADO
+            VStack(alignment: .leading) {
+                Text("OPORTUNIDADES DE VOLUNTARIADO")
+                    .font(.headline)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(volunteerOpportunitiesViewModel.volunteerOpportunitiesList) { opportunity in
+                            InfoCard(imageName: opportunity.imagen, title: opportunity.titulo)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top, 20)
+            
+            // Sección de PREPÁRATE PARA LOS EVENTOS
+            VStack(alignment: .leading) {
+                Text("PREPÁRATE PARA LOS EVENTOS")
+                    .font(.headline)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(prepareEventsViewModel.prepareEventsList) { event in
+                            InfoCard(imageName: event.imagen, title: event.nombre)
                         }
                     }
                     .padding(.horizontal)

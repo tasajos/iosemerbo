@@ -13,6 +13,8 @@
 		0711B6562C72807D0039D825 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0711B6552C72807C0039D825 /* GoogleService-Info.plist */; };
 		0711B6582C72C4E90039D825 /* InfoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B6572C72C4E80039D825 /* InfoUtil.swift */; };
 		0711B65A2C72C53B0039D825 /* InfoUtilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B6592C72C53B0039D825 /* InfoUtilViewModel.swift */; };
+		0711B65C2C72EF860039D825 /* VolunteerOpportunitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B65B2C72EF840039D825 /* VolunteerOpportunitiesViewModel.swift */; };
+		0711B65E2C72EFEF0039D825 /* PrepareEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0711B65D2C72EFEE0039D825 /* PrepareEventsViewModel.swift */; };
 		07C96CA42C7183D800CA3A07 /* EmergenciasBoliviaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */; };
 		07C96CA62C7183D800CA3A07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C96CA52C7183D800CA3A07 /* ContentView.swift */; };
 		07C96CA82C7183E500CA3A07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C96CA72C7183E500CA3A07 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		0711B6552C72807C0039D825 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0711B6572C72C4E80039D825 /* InfoUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUtil.swift; sourceTree = "<group>"; };
 		0711B6592C72C53B0039D825 /* InfoUtilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUtilViewModel.swift; sourceTree = "<group>"; };
+		0711B65B2C72EF840039D825 /* VolunteerOpportunitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerOpportunitiesViewModel.swift; sourceTree = "<group>"; };
+		0711B65D2C72EFEE0039D825 /* PrepareEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareEventsViewModel.swift; sourceTree = "<group>"; };
 		07C96CA02C7183D800CA3A07 /* EmergenciasBolivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergenciasBolivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C96CA32C7183D800CA3A07 /* EmergenciasBoliviaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergenciasBoliviaApp.swift; sourceTree = "<group>"; };
 		07C96CA52C7183D800CA3A07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				0711B6532C7248400039D825 /* Homev2Screen.swift */,
 				0711B6572C72C4E80039D825 /* InfoUtil.swift */,
 				0711B6592C72C53B0039D825 /* InfoUtilViewModel.swift */,
+				0711B65B2C72EF840039D825 /* VolunteerOpportunitiesViewModel.swift */,
+				0711B65D2C72EFEE0039D825 /* PrepareEventsViewModel.swift */,
 			);
 			path = EmergenciasBolivia;
 			sourceTree = "<group>";
@@ -346,11 +352,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C96CA62C7183D800CA3A07 /* ContentView.swift in Sources */,
+				0711B65C2C72EF860039D825 /* VolunteerOpportunitiesViewModel.swift in Sources */,
 				07C96CA42C7183D800CA3A07 /* EmergenciasBoliviaApp.swift in Sources */,
 				0711B65A2C72C53B0039D825 /* InfoUtilViewModel.swift in Sources */,
 				0711B6542C7248410039D825 /* Homev2Screen.swift in Sources */,
 				0711B6522C7221930039D825 /* HomeScreen.swift in Sources */,
 				0711B6582C72C4E90039D825 /* InfoUtil.swift in Sources */,
+				0711B65E2C72EFEF0039D825 /* PrepareEventsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
