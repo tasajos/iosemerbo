@@ -93,9 +93,9 @@ struct URLImage: View {
             if let loadedImage = loadedImage {
                 Image(uiImage: loadedImage)
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill() // Utiliza scaledToFill para llenar el espacio disponible
+                    .clipped() // Recorta la imagen para que no se salga del marco
             } else {
-                // Muestra un indicador de carga mientras la imagen se descarga
                 ProgressView()
                     .frame(width: 100, height: 100)
             }
@@ -113,7 +113,6 @@ struct URLImage: View {
                 return
             }
 
-            // Actualiza la UI en el hilo principal
             DispatchQueue.main.async {
                 self.loadedImage = image
             }
@@ -121,33 +120,33 @@ struct URLImage: View {
     }
 }
 
-
 struct InfoCard: View {
     let imageName: String
     let title: String
 
     var body: some View {
-        VStack(alignment: .leading) {
-            URLImage(imageUrl: imageName) // Utiliza URLImage para cargar la imagen desde la URL
+        HStack {
+            URLImage(imageUrl: imageName)
                 .frame(width: 100, height: 100)
                 .cornerRadius(10)
-
+            
+            Spacer()
+            
             Text(title)
-                .font(.caption)
+                .font(.headline)
                 .foregroundColor(.black)
-                .padding(.top, 5)
+                .padding(.trailing, 10)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(width: 150, height: 120)
+        .frame(width: 300, height: 100) // Ajusta el tamaño según sea necesario
         .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 5)
     }
 }
 
-
 struct Homev2Screen_Previews: PreviewProvider {
     static var previews: some View {
         Homev2Screen()
     }
 }
-
