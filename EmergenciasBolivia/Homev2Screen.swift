@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct Homev2Screen: View {
+    @StateObject private var viewModel = InfoUtilViewModel()
+    
     var body: some View {
         VStack {
             // Sección de "Con el Apoyo de"
@@ -55,9 +57,9 @@ struct Homev2Screen: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        InfoCard(imageName: "Eventos", title: "Eventos")
-                        InfoCard(imageName: "Voluntarios", title: "Conviértete en Voluntario")
-                        InfoCard(imageName: "Kits", title: "Kits")
+                        ForEach(viewModel.infoUtilList) { info in
+                            InfoCard(imageName: info.imagen, title: info.nombre)
+                        }
                     }
                     .padding(.horizontal)
                 }
@@ -82,16 +84,52 @@ struct ImageButton: View {
     }
 }
 
+struct URLImage: View {
+    @State private var loadedImage: UIImage? = nil
+    let imageUrl: String
+
+    var body: some View {
+        Group {
+            if let loadedImage = loadedImage {
+                Image(uiImage: loadedImage)
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                // Muestra un indicador de carga mientras la imagen se descarga
+                ProgressView()
+                    .frame(width: 100, height: 100)
+            }
+        }
+        .onAppear {
+            loadImage()
+        }
+    }
+
+    private func loadImage() {
+        guard let url = URL(string: imageUrl) else { return }
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil, let image = UIImage(data: data) else {
+                return
+            }
+
+            // Actualiza la UI en el hilo principal
+            DispatchQueue.main.async {
+                self.loadedImage = image
+            }
+        }.resume()
+    }
+}
+
+
 struct InfoCard: View {
     let imageName: String
     let title: String
 
     var body: some View {
         VStack(alignment: .leading) {
-            Image(imageName)
-                .resizable()
+            URLImage(imageUrl: imageName) // Utiliza URLImage para cargar la imagen desde la URL
                 .frame(width: 100, height: 100)
-                .scaledToFit()
                 .cornerRadius(10)
 
             Text(title)
@@ -106,8 +144,10 @@ struct InfoCard: View {
     }
 }
 
+
 struct Homev2Screen_Previews: PreviewProvider {
     static var previews: some View {
         Homev2Screen()
     }
 }
+
