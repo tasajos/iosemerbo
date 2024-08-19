@@ -80,7 +80,7 @@ struct ImageButton: View {
             .resizable()
             .frame(width: 60, height: 60)
             .scaledToFit()
-            .cornerRadius(10)
+            .cornerRadius(5)
     }
 }
 
@@ -128,7 +128,7 @@ struct InfoCard: View {
         HStack {
             URLImage(imageUrl: imageName)
                 .frame(width: 100, height: 100)
-                .cornerRadius(10)
+                .cornerRadius(5)
             
             Spacer()
             
@@ -140,8 +140,8 @@ struct InfoCard: View {
         }
         .frame(width: 300, height: 100) // Ajusta el tamaño según sea necesario
         .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
+        .cornerRadius(5)
+        .shadow(radius: 1)
     }
 }
 
