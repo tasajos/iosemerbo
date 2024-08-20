@@ -12,6 +12,8 @@ struct Homev2Screen: View {
     @StateObject private var infoUtilViewModel = InfoUtilViewModel()
     @StateObject private var volunteerOpportunitiesViewModel = VolunteerOpportunitiesViewModel()
     @StateObject private var prepareEventsViewModel = PrepareEventsViewModel()
+    @StateObject private var emergenciasActivasViewModel = EmergenciasActivasViewModel()
+    @StateObject private var emergenciasAtendidasViewModel = EmergenciasAtendidasViewModel()
     
     var body: some View {
         VStack {
@@ -102,6 +104,40 @@ struct Homev2Screen: View {
             }
             .padding(.top, 20)
 
+            // Sección de ULTIMAS EMERGENCIAS
+            VStack(alignment: .leading) {
+                Text("ULTIMAS EMERGENCIAS")
+                    .font(.headline)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(emergenciasActivasViewModel.emergenciasActivasList) { emergencia in
+                            EmergencyInfoCard(title: emergencia.titulo)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top, 20)
+
+            // Sección de EMERGENCIAS ATENDIDAS
+            VStack(alignment: .leading) {
+                Text("EMERGENCIAS ATENDIDAS")
+                    .font(.headline)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(emergenciasAtendidasViewModel.emergenciasAtendidasList) { emergencia in
+                            EmergencyInfoCard(title: emergencia.titulo)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+            }
+            .padding(.top, 20)
+
             Spacer()
         }
         .padding()
@@ -163,6 +199,31 @@ struct InfoCard: View {
     var body: some View {
         HStack {
             URLImage(imageUrl: imageName)
+                .frame(width: 100, height: 100)
+                .cornerRadius(5)
+            
+            Spacer()
+            
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.black)
+                .padding(.trailing, 10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(width: 300, height: 100) // Ajusta el tamaño según sea necesario
+        .background(Color.white)
+        .cornerRadius(5)
+        .shadow(radius: 1)
+    }
+}
+
+struct EmergencyInfoCard: View {
+    let title: String
+
+    var body: some View {
+        HStack {
+            Image("luces") // Utiliza la imagen por defecto llamada "luces"
+                .resizable()
                 .frame(width: 100, height: 100)
                 .cornerRadius(5)
             
