@@ -5,7 +5,6 @@
 //  Created by Carlos Azcarraga on 18/8/24.
 //
 
-
 import SwiftUI
 
 struct Homev2Screen: View {
@@ -16,132 +15,155 @@ struct Homev2Screen: View {
     @StateObject private var emergenciasAtendidasViewModel = EmergenciasAtendidasViewModel()
     
     var body: some View {
-        ScrollView { // ScrollView vertical que envuelve todo el contenido
-            VStack {
-                // Sección de "Con el Apoyo de"
-                VStack(spacing: 10) {
-                    Text("Con el Apoyo de")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                    
-                    HStack(spacing: 20) {
-                        Image("logoins")
-                            .resizable()
-                            .frame(width: 180, height: 60)
-                            .scaledToFit()
-                    }
-                }
-                .padding()
-
-                // Sección de VOLUNTARIOS
-                VStack(alignment: .leading) {
-                    Text("VOLUNTARIOS")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ImageButton(imageName: "canalw")
-                            ImageButton(imageName: "bomberos")
-                            ImageButton(imageName: "ambulancias")
-                            ImageButton(imageName: "hospitales")
-                            ImageButton(imageName: "educacion")
-                            ImageButton(imageName: "ambientalistas")
-                            ImageButton(imageName: "animalistas")
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.top, 20)
-
-                // Sección de INFORMACIÓN ÚTIL
-                VStack(alignment: .leading) {
-                    Text("INFORMACIÓN ÚTIL")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(infoUtilViewModel.infoUtilList) { info in
-                                InfoCard(imageName: info.imagen, title: info.nombre)
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+                ScrollView { // ScrollView vertical que envuelve el contenido
+                    VStack {
+                        // Sección de "Con el Apoyo de"
+                        VStack(spacing: 10) {
+                            Text("Con el Apoyo de")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                            
+                            HStack(spacing: 20) {
+                                Image("logoins")
+                                    .resizable()
+                                    .frame(width: 180, height: 60)
+                                    .scaledToFit()
                             }
                         }
-                        .padding(.horizontal)
+                        .padding()
+
+                        // Sección de VOLUNTARIOS
+                        VStack(alignment: .leading) {
+                            Text("VOLUNTARIOS")
+                                .font(.headline)
+                                .padding(.horizontal)
+
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 20) {
+                                    ImageButton(imageName: "canalw")
+                                    ImageButton(imageName: "bomberos")
+                                    ImageButton(imageName: "ambulancias")
+                                    ImageButton(imageName: "hospitales")
+                                    ImageButton(imageName: "educacion")
+                                    ImageButton(imageName: "ambientalistas")
+                                    ImageButton(imageName: "animalistas")
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding(.top, 20)
+
+                        // Sección de INFORMACIÓN ÚTIL
+                        VStack(alignment: .leading) {
+                            Text("INFORMACIÓN ÚTIL")
+                                .font(.headline)
+                                .padding(.horizontal)
+
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 20) {
+                                    ForEach(infoUtilViewModel.infoUtilList) { info in
+                                        InfoCard(imageName: info.imagen, title: info.nombre)
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding(.top, 20)
+                        
+                        // Sección de OPORTUNIDADES DE VOLUNTARIADO
+                        VStack(alignment: .leading) {
+                            Text("OPORTUNIDADES DE VOLUNTARIADO")
+                                .font(.headline)
+                                .padding(.horizontal)
+
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 20) {
+                                    ForEach(volunteerOpportunitiesViewModel.volunteerOpportunitiesList) { opportunity in
+                                        InfoCard(imageName: opportunity.imagen, title: opportunity.titulo)
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding(.top, 20)
+                        
+                        // Sección de PREPÁRATE PARA LOS EVENTOS
+                        VStack(alignment: .leading) {
+                            Text("PREPÁRATE PARA LOS EVENTOS")
+                                .font(.headline)
+                                .padding(.horizontal)
+
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 20) {
+                                    ForEach(prepareEventsViewModel.prepareEventsList) { event in
+                                        InfoCard(imageName: event.imagen, title: event.nombre)
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding(.top, 20)
+
+                        // Sección de ULTIMAS EMERGENCIAS
+                        VStack(alignment: .leading) {
+                            Text("ULTIMAS EMERGENCIAS")
+                                .font(.headline)
+                                .padding(.horizontal)
+
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 20) {
+                                    ForEach(emergenciasActivasViewModel.emergenciasActivasList) { emergencia in
+                                        EmergencyInfoCard(
+                                            title: emergencia.titulo,
+                                            city: emergencia.ciudad,
+                                            date: emergencia.fecha,
+                                            description: emergencia.descripcion,
+                                            estado: emergencia.estado,
+                                            isControlled: false
+                                        )
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding(.top, 20)
+
+                        // Sección de EMERGENCIAS ATENDIDAS
+                        VStack(alignment: .leading) {
+                            Text("EMERGENCIAS ATENDIDAS")
+                                .font(.headline)
+                                .padding(.horizontal)
+
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 20) {
+                                    ForEach(emergenciasAtendidasViewModel.emergenciasAtendidasList) { emergencia in
+                                        EmergencyInfoCard(
+                                            title: emergencia.titulo,
+                                            city: emergencia.ciudad,
+                                            date: emergencia.fecha,
+                                            description: emergencia.descripcion,
+                                            estado: emergencia.estado,
+                                            isControlled: true
+                                        )
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        .padding(.top, 20)
+                        
+                        Spacer(minLength: geometry.size.height * 0.15) // Espacio adicional para que el contenido pueda ser completamente visible
                     }
+                    .padding()
                 }
-                .padding(.top, 20)
                 
-                // Sección de OPORTUNIDADES DE VOLUNTARIADO
-                VStack(alignment: .leading) {
-                    Text("OPORTUNIDADES DE VOLUNTARIADO")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(volunteerOpportunitiesViewModel.volunteerOpportunitiesList) { opportunity in
-                                InfoCard(imageName: opportunity.imagen, title: opportunity.titulo)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.top, 20)
-                
-                // Sección de PREPÁRATE PARA LOS EVENTOS
-                VStack(alignment: .leading) {
-                    Text("PREPÁRATE PARA LOS EVENTOS")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(prepareEventsViewModel.prepareEventsList) { event in
-                                InfoCard(imageName: event.imagen, title: event.nombre)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.top, 20)
-
-                // Sección de ULTIMAS EMERGENCIAS
-                VStack(alignment: .leading) {
-                    Text("ULTIMAS EMERGENCIAS")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(emergenciasActivasViewModel.emergenciasActivasList) { emergencia in
-                                EmergencyInfoCard(title: emergencia.titulo, city: emergencia.ciudad, date: emergencia.fecha, description: emergencia.descripcion, estado: emergencia.estado, isControlled: false)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.top, 20)
-
-                // Sección de EMERGENCIAS ATENDIDAS
-                VStack(alignment: .leading) {
-                    Text("EMERGENCIAS ATENDIDAS")
-                        .font(.headline)
-                        .padding(.horizontal)
-
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
-                            ForEach(emergenciasAtendidasViewModel.emergenciasAtendidasList) { emergencia in
-                                EmergencyInfoCard(title: emergencia.titulo, city: emergencia.ciudad, date: emergencia.fecha, description: emergencia.descripcion, estado: emergencia.estado, isControlled: true)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                }
-                .padding(.top, 20)
-
-                Spacer()
+                FloatingButtonBar()
+                    .frame(height: geometry.size.height * 0.15) // Ocupa el 15% de la pantalla
+                    .background(Color.white.opacity(0.9)) // Fondo de la barra fija
+                    .padding([.leading, .trailing, .bottom], 0)
             }
-            .padding()
         }
     }
 }
@@ -259,7 +281,79 @@ struct EmergencyInfoCard: View {
         .frame(width: 300, height: 100) // Ajusta el tamaño según sea necesario
         .background(isControlled ? Color.green.opacity(0.1) : Color.red.opacity(0.1)) // Fondo verde claro para atendidas, rojo claro para activas
         .cornerRadius(5)
-        .shadow(radius: 1)
+    }
+}
+
+struct FloatingButtonBar: View {
+    var body: some View {
+        HStack {
+            Spacer()
+            
+            Button(action: {
+                // Acción para el primer botón
+            }) {
+                Image("home_icon") // Reemplaza con la imagen correspondiente
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .padding()
+            }
+
+            Spacer()
+
+            Button(action: {
+                // Acción para el segundo botón
+            }) {
+                Image("map_icon") // Reemplaza con la imagen correspondiente
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .padding()
+            }
+
+            Spacer()
+
+            Button(action: {
+                // Acción para el tercer botón
+            }) {
+                Image("report_icon") // Reemplaza con la imagen correspondiente
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .padding()
+            }
+
+            Spacer()
+
+            Button(action: {
+                // Acción para el cuarto botón
+            }) {
+                Image("whatsapp_icon") // Reemplaza con la imagen correspondiente
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .padding()
+            }
+
+            Spacer()
+
+            Button(action: {
+                // Acción para el quinto botón
+            }) {
+                Image("profile_icon") // Reemplaza con la imagen correspondiente
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .padding()
+            }
+
+            //Spacer()
+        }
+        .background(Color.white.opacity(0.9)) // Fondo de la barra fija
+        .padding([.leading, .trailing, .bottom], 0)
+    }
+}
+
+struct FloatingButtonBar_Previews: PreviewProvider {
+    static var previews: some View {
+        FloatingButtonBar()
+            .previewLayout(.sizeThatFits)
+            .padding()
     }
 }
 
