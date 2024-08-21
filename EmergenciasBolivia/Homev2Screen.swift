@@ -292,7 +292,7 @@ struct FloatingButtonBar: View {
             Button(action: {
                 // Acción para el primer botón
             }) {
-                Image("home_icon") // Reemplaza con la imagen correspondiente
+                Image("hogar") // Reemplaza con la imagen correspondiente
                     .resizable()
                     .frame(width: 40, height: 40)
                     .padding()
@@ -303,7 +303,7 @@ struct FloatingButtonBar: View {
             Button(action: {
                 // Acción para el segundo botón
             }) {
-                Image("map_icon") // Reemplaza con la imagen correspondiente
+                Image("mapa") // Reemplaza con la imagen correspondiente
                     .resizable()
                     .frame(width: 40, height: 40)
                     .padding()
@@ -314,7 +314,7 @@ struct FloatingButtonBar: View {
             Button(action: {
                 // Acción para el tercer botón
             }) {
-                Image("report_icon") // Reemplaza con la imagen correspondiente
+                Image("alerta") // Reemplaza con la imagen correspondiente
                     .resizable()
                     .frame(width: 40, height: 40)
                     .padding()
@@ -325,7 +325,7 @@ struct FloatingButtonBar: View {
             Button(action: {
                 // Acción para el cuarto botón
             }) {
-                Image("whatsapp_icon") // Reemplaza con la imagen correspondiente
+                Image("whatsapp") // Reemplaza con la imagen correspondiente
                     .resizable()
                     .frame(width: 40, height: 40)
                     .padding()
@@ -336,7 +336,7 @@ struct FloatingButtonBar: View {
             Button(action: {
                 // Acción para el quinto botón
             }) {
-                Image("profile_icon") // Reemplaza con la imagen correspondiente
+                Image("acceso") // Reemplaza con la imagen correspondiente
                     .resizable()
                     .frame(width: 40, height: 40)
                     .padding()
